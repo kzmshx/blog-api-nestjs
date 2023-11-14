@@ -34,6 +34,8 @@ $ pnpm install
 
 ## Running the app
 
+### Server
+
 ```bash
 # development
 $ pnpm run start
@@ -43,6 +45,18 @@ $ pnpm run start:dev
 
 # production mode
 $ pnpm run start:prod
+```
+
+### DB
+
+```bash
+# Start development DB
+$ docker compose up -d
+```
+
+```bash
+# Stop development DB
+$ docker compose stop
 ```
 
 ## Test
