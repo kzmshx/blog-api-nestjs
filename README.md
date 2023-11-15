@@ -84,3 +84,4 @@ $ pnpm run test:cov
 - `npx prisma init`
 - Modified .env
     - `DATABASE_URL`
+- `npx prisma migrate dev --name "init"`
