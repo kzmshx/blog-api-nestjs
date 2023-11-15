@@ -75,13 +75,18 @@ $ pnpm run test:cov
 
 # Memo
 
-- `volta install node`
-- `npm i -g pnpm`
-- `npx @nestjs/cli new .`
-- `pnpm install`
-- `pnpm run start`
-- `pnpm i -D prisma`
-- `npx prisma init`
-- Modified .env
-    - `DATABASE_URL`
-- `npx prisma migrate dev --name "init"`
+- Setup Node.js
+  - `volta install node`
+  - `npm i -g pnpm`
+- Setup NestJS
+  - `npx @nestjs/cli new .`
+  - `pnpm install`
+- Start NestJS
+  - `pnpm run start`
+- Setup Prisma
+  - `pnpm i -D prisma`
+  - `npx prisma init`
+- Update database schema
+  - `npx prisma migrate dev --name "init"`
+- Seed database
+  - `npx prisma db seed`
