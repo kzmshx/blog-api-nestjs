@@ -90,3 +90,6 @@ $ pnpm run test:cov
   - `npx prisma migrate dev --name "init"`
 - Seed database
   - `npx prisma db seed`
+- Generate Prisma module/service
+  - `npx nest generate module prisma`
+  - `npx nest generate service prisma`
