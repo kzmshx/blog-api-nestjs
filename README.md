@@ -93,3 +93,5 @@ $ pnpm run test:cov
 - Generate Prisma module/service
   - `npx nest generate module prisma`
   - `npx nest generate service prisma`
+- Setup Swagger 
+  - `pnpm i --save @nestjs/swagger swagger-ui-express`
