@@ -7,7 +7,13 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   // Pipes are like middlewares, but their scope is limited to processing the input arguments.
-  app.useGlobalPipes(new ValidationPipe());
+  app.useGlobalPipes(
+    new ValidationPipe({
+      // If true, ValidationPipe will automatically remove all non-whitelisted properties from objects.
+      // This option will filter all properties without validation decorators, even if they are defined in the DTO.
+      whitelist: true,
+    }),
+  );
 
   const config = new DocumentBuilder()
     .setTitle('Median')
