@@ -97,3 +97,5 @@ $ pnpm run test:cov
   - `pnpm i --save @nestjs/swagger swagger-ui-express`
 - Create "article" resource
   - `npx nest generate resource`
+- Validate inputs
+  - `pnpm i --save class-validator class-transformer`
