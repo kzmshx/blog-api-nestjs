@@ -103,3 +103,11 @@ $ pnpm run test:cov
 ## Exception filters
 
 https://docs.nestjs.com/exception-filters
+
+> Nest comes with a built-in exceptions layer which is responsible for processing all unhandled exceptions across an application. When an exception is not handled by your application code, it is caught by this layer, which then automatically sends an appropriate user-friendly response.
+
+### nestjs-prisma
+
+https://github.com/notiz-dev/nestjs-prisma
+
+> Easy Prisma support for your NestJS application.
