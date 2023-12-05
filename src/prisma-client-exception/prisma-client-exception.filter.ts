@@ -16,7 +16,12 @@ export class PrismaClientExceptionFilter extends BaseExceptionFilter {
     switch (exception.code) {
       case 'P2002': {
         const statusCode = HttpStatus.CONFLICT;
-
+        // In production, don't send the exception details or sensitive information to the client.
+        response.status(statusCode).json({ statusCode, message });
+        break;
+      }
+      case 'P2025': {
+        const statusCode = HttpStatus.NOT_FOUND;
         // In production, don't send the exception details or sensitive information to the client.
         response.status(statusCode).json({ statusCode, message });
         break;
