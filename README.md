@@ -99,3 +99,7 @@ $ pnpm run test:cov
   - `npx nest generate resource`
 - Validate inputs
   - `pnpm i --save class-validator class-transformer`
+
+## Exception filters
+
+https://docs.nestjs.com/exception-filters
