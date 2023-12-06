@@ -137,3 +137,13 @@ https://docs.nestjs.com/interceptors
 > - transform the exception thrown from a function 
 > - extend the basic function behavior 
 > - completely override a function depending on specific conditions (e.g., for caching purposes)
+
+## passport
+
+https://www.npmjs.com/package/passport
+
+> Passport is Express-compatible authentication middleware for Node.js.
+
+https://docs.nestjs.com/recipes/passport
+
+> Passport is the most popular node.js authentication library, well-known by the community and successfully used in many production applications. It's straightforward to integrate this library with a Nest application using the @nestjs/passport module.
