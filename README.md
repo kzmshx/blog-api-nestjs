@@ -95,16 +95,24 @@ $ pnpm run test:cov
   - `npx nest generate service prisma`
 - Setup Swagger 
   - `pnpm i --save @nestjs/swagger swagger-ui-express`
-- Create "article" resource
-  - `npx nest generate resource`
+- Add `articles` resource
+  - `npx nest generate resource articles`
+    - What transport layer do you use? `REST API`
+    - Do you like to generate CRUD entry points? `Yes`
 - Validate inputs
   - `pnpm i --save class-validator class-transformer`
-- Add a User model to db
+- Add `User` model
   - `npx prisma migrate dev --name "add-user-model"`
 - Seed users
   - `npx prisma db seed`
-- Add a User resource
-  - `npx nest generate resource`
+- Add `users` resource
+  - `npx nest generate resource users`
+    - What transport layer do you use? `REST API`
+    - Do you like to generate CRUD entry points? `Yes`
+- Add `auth` resource
+  - `npx nest generate resource auth`
+    - What transport layer do you use? `REST API`
+    - Do you like to generate CRUD entry points? `No`
 
 ## Exception filters
 
