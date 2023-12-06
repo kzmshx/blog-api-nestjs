@@ -99,6 +99,12 @@ $ pnpm run test:cov
   - `npx nest generate resource`
 - Validate inputs
   - `pnpm i --save class-validator class-transformer`
+- Add a User model to db
+  - `npx prisma migrate dev --name "add-user-model"`
+- Seed users
+  - `npx prisma db seed`
+- Add a User resource
+  - `npx nest generate resource`
 
 ## Exception filters
 
