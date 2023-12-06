@@ -117,3 +117,15 @@ https://docs.nestjs.com/exception-filters
 https://github.com/notiz-dev/nestjs-prisma
 
 > Easy Prisma support for your NestJS application.
+
+## Interceptors
+
+https://docs.nestjs.com/interceptors
+
+> Interceptors have a set of useful capabilities which are inspired by the Aspect Oriented Programming (AOP) technique. They make it possible to:
+> 
+> - bind extra logic before / after method execution 
+> - transform the result returned from a function 
+> - transform the exception thrown from a function 
+> - extend the basic function behavior 
+> - completely override a function depending on specific conditions (e.g., for caching purposes)
