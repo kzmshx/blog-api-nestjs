@@ -147,3 +147,7 @@ https://www.npmjs.com/package/passport
 https://docs.nestjs.com/recipes/passport
 
 > Passport is the most popular node.js authentication library, well-known by the community and successfully used in many production applications. It's straightforward to integrate this library with a Nest application using the @nestjs/passport module.
+
+## References
+
+- [Building a REST API with NestJS, PostgreSQL, Swagger and Prisma](https://www.prisma.io/blog/series/nestjs-prisma-kges29apbbik)
