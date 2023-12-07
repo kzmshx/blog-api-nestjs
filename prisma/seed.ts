@@ -1,29 +1,24 @@
 import { PrismaClient } from '@prisma/client';
 import * as process from 'process';
+import * as bcrypt from 'bcrypt';
 
 const prisma = new PrismaClient();
 
+const roundsOfHashing = 10;
+
 async function main() {
+  const password1 = await bcrypt.hash('password-sabin', roundsOfHashing);
   const user1 = await prisma.user.upsert({
     where: { email: 'sabin@adams.com' },
-    update: {},
+    update: {
+      password: password1,
+    },
     create: {
       email: 'sabin@adams.com',
       name: 'Sabin Adams',
-      password: 'password-sabin',
+      password: password1,
     },
   });
-
-  const user2 = await prisma.user.upsert({
-    where: { email: 'alex@ruheni.com' },
-    update: {},
-    create: {
-      email: 'alex@ruheni.com',
-      name: 'Alex Ruheni',
-      password: 'password-alex',
-    },
-  });
-
   const post1 = await prisma.article.upsert({
     where: { title: 'Prisma Adds Support for MongoDB' },
     update: {
@@ -39,6 +34,18 @@ async function main() {
     },
   });
 
+  const password2 = await bcrypt.hash('password-alex', roundsOfHashing);
+  const user2 = await prisma.user.upsert({
+    where: { email: 'alex@ruheni.com' },
+    update: {
+      password: password2,
+    },
+    create: {
+      email: 'alex@ruheni.com',
+      name: 'Alex Ruheni',
+      password: password2,
+    },
+  });
   const post2 = await prisma.article.upsert({
     where: { title: "What's new in Prisma?" },
     update: {
